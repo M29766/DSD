@@ -1,0 +1,12 @@
+module half_sub_tb();
+reg a,b;
+wire diff,borrow;
+half_sub(a,b,diff,borrow);
+initial
+ begian
+   # a=0; b=0;
+   # a=0; b=1;
+   # a=1; b=0;
+   # a=1; b=1;
+ end 
+endmodule

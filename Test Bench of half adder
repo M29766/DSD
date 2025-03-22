@@ -1,0 +1,12 @@
+module half_adder_tb();
+reg a,b;
+wire sum,carry;
+half_adder k1(a,b,sum,carry);
+initial
+begian
+# a=0; b=0;
+# a=0; b=1;
+# a=1; b=0;
+# a=1; b=1;
+end 
+endmodule

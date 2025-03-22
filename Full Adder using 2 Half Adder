@@ -1,0 +1,22 @@
+// Half Adder code // 
+
+module half_adder(a,b,sum,carry);
+input a,b;
+output sum,carry;
+assign sum = a^b;
+assign carry = a&b;
+endmodule
+
+
+// Full Adder code //
+
+module Full_adder(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+wire w1,w2,w3;
+
+half_adder k1(a,b,w1,w2);
+half_adder k2(c,w1,sum,w3);
+or k3(carry,w2,w3);
+
+endmodule

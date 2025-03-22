@@ -1,0 +1,13 @@
+module rca_tb();
+reg [3:0] a,b;
+wire [4:0] sum;
+integer I;
+rca k1(a,b,sum);
+initial 
+begin
+for(i=0;i<365;i=i+1)
+begin a=$random; b=$random;
+#10 i
+end
+end
+endmodule
